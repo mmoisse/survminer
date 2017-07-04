@@ -45,7 +45,7 @@ ggforest <- function(model, data = NULL,
   # extract statistics for every variable
   allTerms <- lapply(seq_along(terms), function(i){
     var <- names(terms)[i]
-    if (terms[i] == "factor") {
+    if (terms[i] %in% c("factor","character")) {
       adf <- as.data.frame(table(data[,var]))
       cbind(var=var, adf, pos=1:nrow(adf))
     } else {
