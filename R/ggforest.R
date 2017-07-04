@@ -46,7 +46,10 @@ ggforest <- function(model, data = NULL,
   allTerms <- lapply(seq_along(terms), function(i){
     var <- names(terms)[i]
     if (terms[i] == "factor") {
-      adf <- as.data.frame(table(data[,var]))
+      ## To make sure you get the right variable name you 
+      ## can use the all.vars function.
+      ## Probably a nicer solution exists
+      adf <- as.data.frame(table(data[,all.vars(as.formula(paste("1 ~", var)))]))
       cbind(var=var, adf, pos=1:nrow(adf))
     } else {
       data.frame(var=var, Var1 = "", Freq = nrow(data), pos=1)
