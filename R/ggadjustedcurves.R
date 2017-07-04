@@ -173,6 +173,7 @@ ggadjustedcurves.conditional <- function(data, fit, variable, reference) {
   for (level in lev) {
     indexes <- which(data[,variable] == level)
     if (length(indexes) > 0) {
+      level <- as.character(level)
       df1 <- data[indexes, ]
       ndf <- rbind(df0, df1)
       ndf[,variable] <- factor(ndf[,variable])
