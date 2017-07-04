@@ -117,14 +117,14 @@ ggforest <- function(model, data = NULL,
   # vnames
   for(i in 1:r) {
     if (toShowExpClean[i,"pos"] == 1)
-      grid.text(toShowExpClean[i,"var"], coord1, 0.083 + 0.91*(i-0.5)/r, just = c(0,0), gp=gpar(cex=fontsize, fontface="bold"))
-    grid.text(toShowExpClean[i,"level"], coord2, 0.083 + 0.91*(i-0.5)/r, just = c(0.5,-0.5), gp=gpar(cex=fontsize))
-    grid.text(paste0("(N=",toShowExpClean[i,"N"],")"), coord2, 0.083 + 0.91*(i-0.5)/r, just = c(0.5,1), gp=gpar(cex=fontsize,fontface="italic"))
-    grid.text(toShowExpClean[i,"estimate.1"], coord3, 0.083 + 0.91*(i-0.5)/r, just = c(0.5,-0.5), gp=gpar(cex=fontsize))
+      grid.text(toShowExpClean[i,"var"], coord1, 0.083 + 0.87*(i-0.5)/r, just = c(0,0), gp=gpar(cex=fontsize, fontface="bold"))
+    grid.text(toShowExpClean[i,"level"], coord2, 0.083 + 0.87*(i-0.5)/r, just = c(0.5,-0.5), gp=gpar(cex=fontsize))
+    grid.text(paste0("(N=",toShowExpClean[i,"N"],")"), coord2, 0.083 + 0.87*(i-0.5)/r, just = c(0.5,1), gp=gpar(cex=fontsize,fontface="italic"))
+    grid.text(toShowExpClean[i,"estimate.1"], coord3, 0.083 + 0.87*(i-0.5)/r, just = c(0.5,-0.5), gp=gpar(cex=fontsize))
     grid.text(toShowExpClean[i,"ci"],
-              coord3, 0.083 + 0.91*(i-0.5)/r, just = c(0.5,1), gp=gpar(cex=fontsize, fontface = "italic"))
+              coord3, 0.083 + 0.87*(i-0.5)/r, just = c(0.5,1), gp=gpar(cex=fontsize, fontface = "italic"))
     grid.text(toShowExpClean[i,"stars"],
-              0.99, 0.083 + 0.91*(i-0.5)/r, just = c(1,-0.5), gp=gpar(cex=fontsize, fontface = "italic"))
+              0.99, 0.083 + 0.87*(i-0.5)/r, just = c(1,-0.5), gp=gpar(cex=fontsize, fontface = "italic"))
   }
   # grey bands
   for (i in seq(1,r,2))
